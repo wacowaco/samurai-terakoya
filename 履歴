@@ -1,0 +1,61 @@
+PS C:\Django\myproject> pwd
+
+Path
+----
+C:\Django\myproject
+
+
+PS C:\Django\myproject> cd crud\models.py
+cd : パス 'crud\models.py' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd crud\models.py
++ ~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (crud\models.py:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Django\myproject> cd crud
+PS C:\Django\myproject\crud> cd models.py
+cd : パス 'models.py' が存在しないため検出できません。
+発生場所 行:1 文字:1
++ cd models.py
++ ~~~~~~~~~~~~
+    + CategoryInfo          : ObjectNotFound: (models.py:String) [Set-Location], ItemNotFoundException
+    + FullyQualifiedErrorId : PathNotFound,Microsoft.PowerShell.Commands.SetLocationCommand
+
+PS C:\Django\myproject\crud> pwd
+
+Path
+----
+C:\Django\myproject\crud
+
+
+PS C:\Django\myproject\crud> python manage.py migrate
+>>
+C:\Users\fl-nanba21\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\Django\\myproject\\crud\\manage.py': [Errno 2] No such file or directory
+PS C:\Django\myproject\crud> python manage.py runserver
+>>
+C:\Users\fl-nanba21\AppData\Local\Programs\Python\Python311\python.exe: can't open file 'C:\\Django\\myproject\\crud\\manage.py': [Errno 2] No such file or directory
+PS C:\Django\myproject\crud> history 0
+Get-History : パラメーター 'Id の引数を確認できません。引数 0 が、最小許容範囲 1 を下回っています。1 以上の引数を指定して、コマンドを再度実行してください。
+発生場所 行:1 文字:9
++ history 0
++         ~
+    + CategoryInfo          : InvalidData: (:) [Get-History]、ParameterBindingValidationException
+    + FullyQualifiedErrorId : ParameterArgumentValidationError,Microsoft.PowerShell.Commands.GetHistoryCommand
+
+PS C:\Django\myproject\crud> history  
+
+  Id CommandLine
+  -- -----------
+   1 try { . "c:\Users\fl-nanba21\AppData\Local\Programs\Microsoft VS Code\resources\app\out\vs\workbench\contrib\terminal\common\scripts\shellIntegration.ps...
+   2 pwd
+   3 cd crud\models.py
+   4 cd crud
+   5 cd models.py
+   6 pwd
+   7 python manage.py migrate...
+   8 python manage.py runserver...
+   9 history 0
+
+
+PS C:\Django\myproject\crud> 
